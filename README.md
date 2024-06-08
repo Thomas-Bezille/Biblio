@@ -28,6 +28,12 @@ Check the database schema
 bin/console doctrine:schema:validate
 ```
 
+Create fixtures
+
+```bash
+bin/console doctrine:fixtures:load
+```
+
 ## Start the development server
 
 ```bash
