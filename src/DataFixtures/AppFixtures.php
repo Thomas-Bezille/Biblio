@@ -38,7 +38,7 @@ class AppFixtures extends Fixture
 
         // Create Status
         $status = [];
-        foreach (['to-read', 'reading', 'read'] as $value) {
+        foreach (['A lire', 'En train de le lire', 'Lu'] as $value) {
             $oneStatus = new Status();
             $oneStatus->setName($value);
             $manager->persist($oneStatus);
@@ -58,8 +58,8 @@ class AppFixtures extends Fixture
                 ->setIsbn10($faker->isbn10)
                 ->setIsbn13($faker->isbn13)
                 ->setPageCount($faker->numberBetween(100, 1000))
-                ->setThumbnail($faker->imageUrl(200, 300))
-                ->setSmallThumbnail($faker->imageUrl(100, 150))
+                ->setThumbnail('https://picsum.photos/200/300')
+                ->setSmallThumbnail('https://picsum.photos/100/150')
                 ->addAuthor($faker->randomElement($authors))
                 ->addPublisher($faker->randomElement($publishers));
 
